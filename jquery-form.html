@@ -13,12 +13,79 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 	<style type="text/css">
-		
+		body {
+			font-family: helvetica, sans-serif;
+			font-size: 130%;
+		}
+
+		/* Centred 600px wide */
+		#pageWrapper {
+			width: 600px;
+			margin: 0 auto;
+		}
+
+		.formElement {
+			margin-bottom: 15px;
+		}
+
+		/* Style each input field */
+		input {
+			height: 40px;
+			padding: 5px 5px 12px 5px;
+			font-size: 18px;
+			border-radius: 5px;
+			border: 1px solid grey;
+			width: 320px;
+		}
+
+		label {
+			position: relative;
+			top: 17px;
+			width: 200px;
+			float: left;
+		}
+
+		#submitButton {
+			width: 130px;
+			margin-left: 250px;
+		}
+		#errorMessage {
+			color: red;
+			font-size: 70%;
+		}
+		#successMessage {
+			color: green;
+			font-size: 70%;
+			display: none;
+			margin-bottom: 20px;
+		}
 	</style>
 	
 </head>
 <body>
-	
+	<div id="pageWrapper">
+		<div id="successMessage">Form details correctly submitted. Thank-you!</div>
+		<div id="errorMessage"></div>
+		<div class="formElement">
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" placeholder="youremail@mail.com">
+		</div>
+		<div class="formElement">
+			<label for="phone">Telephone</label>
+			<input type="text" name="phone" id="phone" placeholder="0399999999">
+		</div>
+		<div class="formElement">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password">
+		</div>
+		<div class="formElement">
+			<label for="passwordConfirm">Confirm Password</label>
+			<input type="password" name="passwordConfirm" id="passwordConfirm">
+		</div>
+		<div class="formElement">
+			<input type="submit" id="submitButton" value="Sign Up">
+		</div>
+	</div>
 
 	<script type="text/javascript">		
 		
